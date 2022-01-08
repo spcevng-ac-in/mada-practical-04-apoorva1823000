@@ -1,9 +1,12 @@
 package com.example.practical_4;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -22,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         tcv = findViewById(R.id.teslaCard);
         etv = findViewById(R.id.einsteinName);
         ecv = findViewById(R.id.einsteinCard);
+        ActionBar actionBar = getSupportActionBar();
+        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#E9EFF7"));
+        actionBar.setBackgroundDrawable(colorDrawable);
         ttv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,6 +58,6 @@ public class MainActivity extends AppCompatActivity {
         });
         Intent revintent = getIntent();
         String msg = revintent.getStringExtra("msg");
-        setTitle(msg);
+        Toast.makeText(MainActivity.this, "! "+msg, Toast.LENGTH_SHORT).show();
     }
 }

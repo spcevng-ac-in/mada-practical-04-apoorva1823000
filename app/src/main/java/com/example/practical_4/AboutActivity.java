@@ -25,7 +25,7 @@ public class AboutActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String title = intent.getStringExtra("Name");
         if (title.equalsIgnoreCase("Tesla")){
-            img.setImageResource(R.drawable.teslaimg);
+            img.setImageResource(R.drawable.teslanobg2);
             desc.setText(R.string.tesla);
             back.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -48,7 +48,7 @@ public class AboutActivity extends AppCompatActivity {
             });
         }
         else{
-            img.setImageResource(R.drawable.einstein);
+            img.setImageResource(R.drawable.einsteinnobg);
             desc.setText(R.string.einstien);
             back.setOnClickListener(new View.OnClickListener() {
                 @Override
